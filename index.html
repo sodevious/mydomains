@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="EN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>mydomains</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+
+<div id="myDomains">
+    <ol>
+        <li v-for="domain in domains">
+            {{ domain.text }}
+        </li>
+    </ol>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script src="js/application.js"></script>
+
+
+</body>
+</html>
