@@ -1,0 +1,29 @@
+body {
+  background-color: white;
+  font-size: 14px;
+  padding: 0px;
+  font-family: "museo-sans", "Museo Sans", "Avenir", Helvetica, sans-serif;
+  margin: 0px; }
+
+.app-header {
+  background-color: #480FC6;
+  height: 60px;
+  text-align: center;
+  color: white; }
+
+.app-header__heading {
+  line-height: 60px;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px; }
+
+.app-list {
+  font-family: "inconsolata", monospace;
+  padding: 0px;
+  margin: 0px; }
+
+.app-list__item {
+  border-bottom: 1px solid #ececec;
+  padding: 20px;
+  display: block;
+  margin: 0px; }

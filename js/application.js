@@ -2,9 +2,18 @@ var app = new Vue({
   el: '#myDomains',
   data: {
     domains: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue' },
-      { text: 'Build something awesome' }
+      {
+          name: "sodevious.net",
+          registrar: "Namecheap"
+      },
+      {
+          name: "sodevio.us",
+          registrar: "iWantMyName"
+      },
+      {
+          name: "nicoledominguez.com",
+          registrar: "Namecheap"
+      }
     ]
   }
 })

@@ -1,0 +1,47 @@
+
+$purple:        #480FC6
+$purple-dark:   #27007C
+
+$pink:          #DE1A45
+
+$gray:          #6C6C6C
+$gray-light:    #A8A8A8
+$gray-lighter:  #F5F5F5
+
+$app-header-height:     60px
+
+$font-size__body:       14px
+$font-size__heading:    18px
+
+$font-family__sans-serif: "museo-sans", "Museo Sans", "Avenir", Helvetica, sans-serif
+$font-family__monospace: "inconsolata", monospace
+
+body
+  background-color: white
+  font-size: $font-size__body
+  padding: 0px
+  font-family: $font-family__sans-serif
+  margin: 0px
+
+.app-header
+    background-color: $purple
+    height: $app-header-height
+    text-align: center
+    color: white
+
+.app-header__heading
+    line-height: $app-header-height
+    font-size: $font-size__heading
+    margin: 0px
+    padding: 0px
+
+.app-list
+    font-family: $font-family__monospace
+    padding: 0px
+    margin: 0px
+
+.app-list__item
+    border-bottom: 1px solid lighten($gray, 50%)
+    padding: 20px
+    display: block
+    margin: 0px

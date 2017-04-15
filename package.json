@@ -1,0 +1,20 @@
+{
+  "name": "mydomains",
+  "version": "1.0.0",
+  "description": "https://dribbble.com/shots/3434979-mydomains-Mobile-Views",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path sass css/application.sass   css/application.css",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "vue": "^2.2.6"
+  },
+  "dependencies": {
+    "normalize.css": "^6.0.0"
+  }
+}
