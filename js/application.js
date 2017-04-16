@@ -1,6 +1,6 @@
 
 var Child = {
-    template: '<div class="modal-mask">A custom component!</div>'
+    template: '<div class="app-new">A custom component!</div>'
 }
 
 
@@ -10,14 +10,14 @@ new Vue({
   data: {
     newTask: "",
     taskList: [],
-    showAddModal: false 
+    showAddModal: false,
+    isActive: false
   },
   
   components: {
    'add-modal': Child
  },
 
-  //This is where we will hold the methods we want to use in our application
   methods: {
     addTask: function() {
       //trim() is used to remove whitespace from both ends of a string
@@ -31,7 +31,12 @@ new Vue({
         //Reset newTask to an empty string so the input field is cleared
         this.newTask = "";
       }
-    }
+  },
+  toggleModal: function(){
+       this.showAddModal = !this.showAddModal,
+       this.isActive = !this.isActive
+   }
+
   }  
   
 });

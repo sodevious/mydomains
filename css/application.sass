@@ -20,10 +20,10 @@ $font-family__sans-serif: "museo-sans", "Museo Sans", "Avenir", Helvetica, sans-
 $font-family__monospace: "inconsolata", monospace
 
 body
-  background-color: white
-  font-size: $font-size__body
-  padding: 0px
   font-family: $font-family__sans-serif
+  font-size: $font-size__body
+  background-color: white
+  padding: 0px
   margin: 0px
 
 .app-header
@@ -35,10 +35,11 @@ body
 .app-header__heading
     line-height: $app-header-height
     font-size: $font-size__heading
-    margin: 0px
-    padding: 0px
     font-family: $font-family__monospace
     color: $purple-light
+    padding: 0px
+    margin: 0px
+    
     span
         color: white
         
@@ -48,6 +49,9 @@ body
     position: absolute
     top: 15px
     right: 15px
+    
+    &.active
+        transform: rotate(45deg)
     
 .app-list
     padding: 0px
@@ -70,8 +74,11 @@ body
     color: $purple-light
     font-size: $font-size__body-sm
 
-.modal-mask
-    background: red
-    //position: absolute
-    top: 0
+.app-new
+    background: rgba(255,255,255,0.9)
+    left: 0
+    z-index: 100
+    right: 0
+    position: absolute
+    top: $app-header-height
     bottom: 0

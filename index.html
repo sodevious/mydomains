@@ -30,10 +30,9 @@
         <h1 class="app-header__heading">
             my<span>domains</span>
         </h1>
-        
-        <button id="" @click="showAddModal = false">x</button>
+    
 
-        <span class="app-header__add"  @click="showAddModal = true">+
+        <span v-bind:class="{ active: isActive } " class="app-header__add" @click='toggleModal()'>+
         </span>
     </div>
     
@@ -41,18 +40,18 @@
     <input type="text" placeholder="What do you need to do?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
     <button>Clear List</button>
   
-  {{ $data }}
   
     <ol class="app-list">
         
-<add-modal v-if="showAdd"></add-modal>
+<add-modal v-show="showAddModal"></add-modal>
 
         <li class="app-list__item" v-for="newTask in taskList">
             <div class="app-domain__name">
             {{ newTask.text }}
             </div>
             <div class="app-domain__registrar">
-            
+                {{ $data }}
+
             </div>
         </li>
     </ol>
