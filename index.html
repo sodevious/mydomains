@@ -56,8 +56,9 @@
             <div class="app-new__form-group">
                 <label for="modalRegistrarInput" class="app-new__label">Registrar</label>
 
-                <input type="registrar" class="app-new__input" id="modalRegistrarInput" placeholder="Pick one"
-                    autofocus v-model="registrarName" v-on:keyup.enter="addItem" />
+                <select id="modalRegistrarInput" class="app-new__input" v-model="registrarName" v-on:keyup.enter="addItem">
+                    <option v-for="reg in regList">{{ reg.name }}</option>
+                </select>
             </div>
         </div>
     </div>

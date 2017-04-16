@@ -1,39 +1,23 @@
-
+//
+// init
+@import partials/_variables
 @import partials/_mixins
 
-$purple:        #480FC6
-$purple-dark:   #27007C
-$purple-light:  lighten($purple, 40%)
-$pink:          #DE1A45
 
-$gray:          #6C6C6C
-$gray-light:    #A8A8A8
-$gray-lighter:  #F5F5F5
-
-$app-header-height:     60px
-
-$font-size__body-sm:    12px
-$font-size__body:       16px
-
-$font-size__heading:    18px
-$font-size__heading-lg: 24px
-
-$font-family__sans-serif: "museo-sans", "Museo Sans", "Avenir", Helvetica, sans-serif
-$font-family__monospace: "inconsolata", monospace
-
-
+//
+// General
 *
     box-sizing: border-box
     padding: 0px
     margin: 0px
-
 
 body
     font-family: $font-family__sans-serif
     font-size: $font-size__body
     background-color: white
 
-
+//
+// Header
 .app-header
     background-color: $purple
     height: $app-header-height
@@ -62,10 +46,11 @@ body
     font-size: $font-size__heading-lg
     position: absolute
     top: 15px
+    cursor: pointer
     right: 15px
 
-
-
+//
+// Content
 .app-list
     padding: 0px
     margin: 0px
@@ -87,6 +72,8 @@ body
     color: $purple-light
     font-size: $font-size__body-sm
 
+//
+// Modal
 .app-new
     background: $gray-lighter
     left: 0
@@ -103,18 +90,16 @@ body
     margin-bottom: 15px
     display: block
 
-
-
 .app-new__input
     width: 100%
     border: 0
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1)
     padding: 15px 18px
     outline: 0
+    height: 46px
     font-size: $font-size__body
     font-family: $font-family__sans-serif
     +placeholder-color($gray-light)
-
 
 .app-new__form-group
     margin-bottom: 30px

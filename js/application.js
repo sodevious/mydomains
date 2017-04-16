@@ -7,6 +7,11 @@ var app = new Vue({
             text: "nicoledominguez.com",
             registrar: "Namecheap"
         }],
+        regList: [
+            { name: "Namecheap" },
+            { name: "Godaddy" },
+            { name: "iWantmyname" }
+        ],
         showAddModal: false,
         registrarName: ""
     },
@@ -14,7 +19,7 @@ var app = new Vue({
     methods: {
         addItem: function() {
             var task = this.newItem.trim();
-            var registrar = this.registrarName.trim();
+            var registrar = this.registrarName;
 
             if (task) { //if task is not an empty string
                 this.itemList.push({
