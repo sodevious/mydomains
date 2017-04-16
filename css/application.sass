@@ -1,7 +1,7 @@
 
 $purple:        #480FC6
 $purple-dark:   #27007C
-
+$purple-light:  lighten($purple, 40%)
 $pink:          #DE1A45
 
 $gray:          #6C6C6C
@@ -10,8 +10,11 @@ $gray-lighter:  #F5F5F5
 
 $app-header-height:     60px
 
-$font-size__body:       14px
+$font-size__body-sm:    12px
+$font-size__body:       16px
+
 $font-size__heading:    18px
+$font-size__heading-lg: 24px
 
 $font-family__sans-serif: "museo-sans", "Museo Sans", "Avenir", Helvetica, sans-serif
 $font-family__monospace: "inconsolata", monospace
@@ -34,9 +37,19 @@ body
     font-size: $font-size__heading
     margin: 0px
     padding: 0px
-
-.app-list
     font-family: $font-family__monospace
+    color: $purple-light
+    span
+        color: white
+        
+.app-header__add
+    color: white
+    font-size: $font-size__heading-lg
+    position: absolute
+    top: 15px
+    right: 15px
+    
+.app-list
     padding: 0px
     margin: 0px
 
@@ -45,3 +58,20 @@ body
     padding: 20px
     display: block
     margin: 0px
+    font-size: $font-size__body
+
+.app-domain__name
+    font-family: $font-family__monospace
+    margin-bottom: 5px
+    color: $purple
+
+.app-domain__registrar
+    text-transform: uppercase
+    color: $purple-light
+    font-size: $font-size__body-sm
+
+.modal-mask
+    background: red
+    //position: absolute
+    top: 0
+    bottom: 0

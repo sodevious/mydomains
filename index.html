@@ -23,20 +23,36 @@
 </head>
 <body>
 
+
+    
 <div id="myDomains">
     <div class="app-header">
         <h1 class="app-header__heading">
             my<span>domains</span>
         </h1>
-    </div>
+        
+        <button id="" @click="showAddModal = false">x</button>
 
+        <span class="app-header__add"  @click="showAddModal = true">+
+        </span>
+    </div>
+    
+    <input type="checkbox" id="mark-all">
+    <input type="text" placeholder="What do you need to do?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+    <button>Clear List</button>
+  
+  {{ $data }}
+  
     <ol class="app-list">
-        <li class="app-list__item" v-for="domain in domains">
+        
+<add-modal v-if="showAdd"></add-modal>
+
+        <li class="app-list__item" v-for="newTask in taskList">
             <div class="app-domain__name">
-                {{ domain.name }}
+            {{ newTask.text }}
             </div>
             <div class="app-domain__registrar">
-                {{ domain.registrar }}
+            
             </div>
         </li>
     </ol>
@@ -44,6 +60,9 @@
 
 <script src="./node_modules/vue/dist/vue.min.js"></script>
 <script src="js/application.js"></script>
+
+
+
 
 </body>
 </html>

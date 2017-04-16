@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0px;
   font-family: "museo-sans", "Museo Sans", "Avenir", Helvetica, sans-serif;
   margin: 0px; }
@@ -15,10 +15,20 @@ body {
   line-height: 60px;
   font-size: 18px;
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  font-family: "inconsolata", monospace;
+  color: #c1a9f8; }
+  .app-header__heading span {
+    color: white; }
+
+.app-header__add {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px; }
 
 .app-list {
-  font-family: "inconsolata", monospace;
   padding: 0px;
   margin: 0px; }
 
@@ -26,4 +36,20 @@ body {
   border-bottom: 1px solid #ececec;
   padding: 20px;
   display: block;
-  margin: 0px; }
+  margin: 0px;
+  font-size: 16px; }
+
+.app-domain__name {
+  font-family: "inconsolata", monospace;
+  margin-bottom: 5px;
+  color: #480FC6; }
+
+.app-domain__registrar {
+  text-transform: uppercase;
+  color: #c1a9f8;
+  font-size: 12px; }
+
+.modal-mask {
+  background: red;
+  top: 0;
+  bottom: 0; }
