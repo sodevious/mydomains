@@ -7,9 +7,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="css/application.css">
 
+    <!-- Typekit -->
     <script>
       (function(d) {
         var config = {
@@ -21,47 +22,47 @@
       })(document);
     </script>
 </head>
+
 <body>
+    <div id="myDomains">
+        <div class="app-header" v-bind:class="{ modalActive: showAddModal }">
+            <h1 class="app-header__heading">
+                my<span>domains</span>
+            </h1>
 
+            <span class="app-header__add" @click='toggleModal()'>+</span>
+        </div>
 
-    
-<div id="myDomains">
-    <div class="app-header">
-        <h1 class="app-header__heading">
-            my<span>domains</span>
-        </h1>
-    
+        <ol class="app-list">
+            <li class="app-list__item" v-for="newItem in itemList">
+                <div class="app-domain__name">
+                    {{ newItem.text }}
+                </div>
 
-        <span v-bind:class="{ active: isActive } " class="app-header__add" @click='toggleModal()'>+
-        </span>
+                <div class="app-domain__registrar">
+                    {{ newItem.registrar }}
+                </div>
+            </li>
+        </ol>
+
+        <div class="app-new" v-show="showAddModal">
+            <div class="app-new__form-group">
+                <label for="modalDomainInput" class="app-new__label">Domain Name</label>
+
+                <input type="text" class="app-new__input" id="modalDomainInput" placeholder="mydomains.co"
+                    autofocus v-model="newItem" v-on:keyup.enter="addItem" />
+            </div>
+
+            <div class="app-new__form-group">
+                <label for="modalRegistrarInput" class="app-new__label">Registrar</label>
+
+                <input type="registrar" class="app-new__input" id="modalRegistrarInput" placeholder="Pick one"
+                    autofocus v-model="registrarName" v-on:keyup.enter="addItem" />
+            </div>
+        </div>
     </div>
-    
-    <input type="checkbox" id="mark-all">
-    <input type="text" placeholder="What do you need to do?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
-    <button>Clear List</button>
-  
-  
-    <ol class="app-list">
-        
-<add-modal v-show="showAddModal"></add-modal>
 
-        <li class="app-list__item" v-for="newTask in taskList">
-            <div class="app-domain__name">
-            {{ newTask.text }}
-            </div>
-            <div class="app-domain__registrar">
-                {{ $data }}
-
-            </div>
-        </li>
-    </ol>
-</div>
-
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script src="js/application.js"></script>
-
-
-
-
+  <script src="vendor/vue.js"></script>
+  <script src="js/application.js"></script>
 </body>
 </html>
